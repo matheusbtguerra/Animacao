@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+body{
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+
+img{
+    width: 180px;
+    position: absolute;
+    bottom: 5px;
+    /* animation-name: move;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-play-state: running ; */
+    animation: move 10s ease infinite reverse running;
+}
+
+img:hover{
+    animation-play-state: paused;
+}
+
+@keyframes move {
+
+    from {
+        /* transform: translateX() ;
+        transform: translateY(); */
+        translate: -100vw -5vh;
+    }
+
+    to {
+        /* transform: translateX(calc(100vw - 180px));
+        transform: translateY(calc(100vh - 180px)); */
+        translate: 100vw 5vh;
+    }
+
+}
